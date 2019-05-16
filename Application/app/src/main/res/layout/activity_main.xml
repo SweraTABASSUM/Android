@@ -1,19 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/change_text_editor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Input text and click below button to display in bottom text view."/>
+
+    <Button
+        android:id="@+id/change_text_in_child_thread_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Change Text In Child Thread"/>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/change_text_textview"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="This is original text."/>
 
-</android.support.constraint.ConstraintLayout>
+
+</LinearLayout>
